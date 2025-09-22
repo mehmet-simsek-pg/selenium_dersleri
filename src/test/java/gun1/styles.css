@@ -1,0 +1,88 @@
+/* Basit modern bir görünüm: kartlar, tipografi, formlar, tablo, responsive yapılar */
+:root {
+--brand: #3b82f6;
+--bg: #0b1020;
+--surface: #12172a;
+--muted: #95a1b2;
+--text: #e6ebf3;
+--border: #26324a;
+--radius: 16px;
+--shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+
+/* Reset/normalize küçük dokunuşlar */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+margin: 0;
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+color: var(--text);
+background: linear-gradient(180deg, #0a0f1e, #0f1426 40%, #10162b);
+}
+img, video { max-width: 100%; height: auto; border-radius: 12px; }
+
+
+.container { width: min(1100px, 92%); margin-inline: auto; }
+.lead { color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+
+/* Header & Nav */
+header { position: sticky; top: 0; z-index: 10; background: rgba(10,15,30,.7); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.header-inner { padding: 20px 0 8px; }
+header h1 { margin: 0; font-size: clamp(1.25rem, 1rem + 2vw, 2rem); }
+.nav { display: flex; gap: 1rem; list-style: none; padding: .75rem 0; margin: 0; overflow-x: auto; }
+.nav a { color: var(--text); text-decoration: none; padding: .5rem .75rem; border: 1px solid transparent; border-radius: 999px; }
+.nav a:hover, .nav a:focus { border-color: var(--border); background: rgba(255,255,255,.05); }
+
+
+/* Sections */
+main section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+section h2 { margin-top: 0; }
+.tip { background: rgba(59,130,246,.1); border: 1px solid rgba(59,130,246,.3); padding: .75rem 1rem; border-radius: 12px; }
+
+
+/* Grids */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+
+
+/* Cards */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+.card .card-body { padding: 1rem; display: grid; gap: .5rem; }
+.btn, .btn-outline { cursor: pointer; font: inherit; padding: .6rem .9rem; border-radius: 10px; border: 1px solid var(--border); }
+.btn { background: var(--brand); color: white; border-color: transparent; }
+.btn:hover { filter: brightness(1.05); }
+.btn-outline { background: transparent; color: var(--text); }
+.btn-outline:hover { background: rgba(255,255,255,.06); }
+
+
+/* Aspect ratio helper for iframes/videos */
+.ratio { position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; }
+.ratio > iframe, .ratio > video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+
+/* Table */
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+caption { text-align: left; padding: .75rem 1rem; color: var(--muted); }
+th, td { padding: .75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+thead th { background: rgba(255,255,255,.04); }
+tfoot td { color: var(--muted); }
+
+
+/* Forms */
+form { display: grid; gap: 1.25rem; background: rgba(255,255,255,.03); padding: 1.25rem; border: 1px solid var(--border); border-radius: 16px; }
+fieldset { border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+legend { padding: 0 .5rem; color: var(--muted); }
+.form-row { display: grid; gap: .35rem; margin-bottom: .75rem; }
+label { font-weight: 600; }
+input, select, textarea { background: #0f162c; color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: .6rem .75rem; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+.form-actions { display: flex; gap: .75rem; }
+
+
+/* Footer */
+footer { padding: 2rem 0; color: var(--muted); text-align: center; }
+footer a { color: var(--text); }

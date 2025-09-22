@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HTML etiketleri ders örneği: semantik yapılar, iframe, form, kartlar ve daha fazlası" />
+    <title>Derslik Anasayfa — HTML Etiketleri Gösterimi</title>
+
+
+    <!-- Harici CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <!-- Favicon örneği -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📚</text></svg>">
+
+
+    <!-- İç CSS (opsiyonel, sadece gösterim için; asıl stil styles.css'te) -->
+    <style>
+        /* Buraya ufak bir yedek stil koyduk; asıl stiller styles.css'te */
+        :root { --brand: #3b82f6; }
+        body { font-family: system-ui, sans-serif; line-height: 1.6; }
+    </style>
+
+
+    <!-- Yapılandırılmış veri (örnek) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Derslik Anasayfa",
+            "url": "https://example.com/"
+        }
+    </script>
+</head>
+<body>
+<noscript>Bu sayfanın bazı özellikleri JavaScript kapalıyken sınırlı çalışır.</noscript>
+
+
+<header>
+    <div class="container header-inner">
+        <h1><abbr title="HyperText Markup Language">HTML</abbr> Etiketleri Tanıtımı <small>(Derslik)</small></h1>
+        <p class="lead">Semantik bloklar, listeler, tablo, medya, <mark>iframe</mark>, <em>form</em> ve kart örnekleri.</p>
+    </div>
+    <nav aria-label="Ana">
+        <ul class="nav">
+            <li><a href="#giris">Giriş</a></li>
+            <li><a href="#kartlar">Kartlar</a></li>
+            <li><a href="#liste-ve-tablo">Listeler & Tablo</a></li>
+            <li><a href="#medya">Medya</a></li>
+            <li><a href="#iframe">iFrame</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#diger">Diğer Etiketler</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main id="giris" class="container">
+    <section aria-labelledby="giris-baslik">
+        <h2 id="giris-baslik">Giriş</h2>
+        <article>
+            <h3>Semantik Etiketler</h3>
+            <p><strong>header, nav, main, section, article, aside, footer</strong> gibi semantik etiketler sayfa anlamını güçlendirir.</p>
+            <aside class="tip">İpucu: <code>&lt;section&gt;</code> başlığa (<code>h2</code> vb.) sahip olmalı; <code>&lt;article&gt;</code> tek başına da anlamlı içeriği temsil eder.</aside>
+            <details>
+                <summary>Bu sayfada kullanılan bazı etiketler</summary>
+                <p><small><code>figure, figcaption, picture, source, time, mark, abbr, q, blockquote, code, pre, kbd, samp, sup, sub, del, ins, progress, meter, dialog, template, canvas, svg, table</code> ve daha fazlası…</small></p>
+            </details>
+        </article>
+    </section>
+
+
+    <section id="kartlar" aria-labelledby="kartlar-baslik">
+        <h2 id="kartlar-baslik">Kart (Card) Yapısı</h2>
+</html>
