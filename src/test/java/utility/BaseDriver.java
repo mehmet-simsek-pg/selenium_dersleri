@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseDriver {
 
-    public static void driver(String url) {
+    public static WebDriver driver(String url) {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();
@@ -25,6 +25,7 @@ public class BaseDriver {
         } catch (Exception e) {
             System.out.println("Bilinmiyen bir hata olustu");
         }
-
+            return driver;
     }
+
 }
