@@ -18,9 +18,8 @@ public class BaseDriver {
                     driver.findElement(By.xpath("//div[@class='fc-footer-buttons']/button[1]"));
 
             element.click();
-            if (!element.isEnabled()) {
-                throw new NoSuchElementException("Element sayfada yok");
-            }
+            throw new NoSuchElementException("Element sayfada yok");
+
         } catch (NoSuchElementException e) {
             System.out.println(e.getMessage());
         } catch (Exception e) {
