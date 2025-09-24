@@ -30,7 +30,7 @@ public class BaseDriver {
 
     public static void threadWait(int second) {
         try {
-            Thread.sleep(second);
+            Thread.sleep(second*1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
