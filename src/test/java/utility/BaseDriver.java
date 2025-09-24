@@ -28,4 +28,12 @@ public class BaseDriver {
             return driver;
     }
 
+    public static void threadWait(int second) {
+        try {
+            Thread.sleep(second);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
