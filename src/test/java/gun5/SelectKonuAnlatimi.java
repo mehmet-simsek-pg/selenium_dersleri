@@ -27,6 +27,8 @@ public class SelectKonuAnlatimi {
         select.selectByValue("Azerbaijan");
         WebElement selected = select.getFirstSelectedOption();
         System.out.println("Secilen option: " + selected.getText());
+        //System.out.println("Secilen option: " + select.getFirstSelectedOption().getText());
+        // bir üst satir ile ayn isi yapar
 /**
         // 2. yöntem index ile secim
         select.selectByIndex(2);
