@@ -12,7 +12,7 @@ public class ScrollKonuAnlatimi {
         WebDriver driver = BaseDriver.driver("https://www.selenium.dev/selenium/web/scroll3.html");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("window.scrollBy(0,2500)"); // Sayfayi 500 px asagi kaydirir
+        //js.executeScript("window.scrollBy(0,2500)"); // Sayfayi 2500 px asagi kaydirir
 
         //js.executeScript("window.scrollTo(0,document.body.scrollHeight)"); // Sayfanin en sonuna kaydirir
 
