@@ -41,5 +41,13 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.20.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.testervippro/record-video -->
+        <dependency>
+            <groupId>io.github.testervippro</groupId>
+            <artifactId>record-video</artifactId>
+            <version>2.1</version>
+        </dependency>
+
     </dependencies>
 </project>

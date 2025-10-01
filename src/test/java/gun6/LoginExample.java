@@ -1,5 +1,7 @@
 package gun6;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +11,15 @@ import utility.BaseDriver;
 import utility.JSONHelper;
 
 public class LoginExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ATUTestRecorderException {
+
+        ATUTestRecorder recorder = new ATUTestRecorder(
+                "src/test/resources/test-records",
+                "LoginExample" + System.currentTimeMillis(),
+                false
+        );
+
+        recorder.start(); // kayit basladi
 
         WebDriver driver = BaseDriver.driver("https://www.saucedemo.com/");
 
@@ -35,5 +45,7 @@ public class LoginExample {
         Assert.assertEquals("Ana sayfa acilmadi", expected, actual);
         BaseDriver.threadWait(3);
         driver.quit();
+
+        recorder.stop(); // kayit kapandi
     }
 }
