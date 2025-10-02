@@ -23,7 +23,7 @@ public class LoginExample {
 
         WebDriver driver = BaseDriver.driver("https://www.saucedemo.com/");
 
-        User user = JSONHelper.read();
+        User user = JSONHelper.read("users");
 
         final String email = user.getEmail();
         final String password = user.getPassword();

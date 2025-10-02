@@ -8,11 +8,11 @@ import java.io.IOException;
 
 public class JSONHelper {
 
-    public static User read() {
+    public static User read(final String path) {
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-          return objectMapper.readValue(new File("src/test/resources/testData/users.json"), User.class);
+          return objectMapper.readValue(new File("src/test/resources/testData/"+ path +".json"), User.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
