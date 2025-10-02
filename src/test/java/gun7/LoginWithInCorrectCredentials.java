@@ -47,6 +47,5 @@ public class LoginWithInCorrectCredentials {
         Assert.assertTrue("Kullanici login oldu", errorText.isDisplayed());
 
         driver.quit();
-
     }
 }
